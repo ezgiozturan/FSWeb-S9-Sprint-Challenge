@@ -130,16 +130,18 @@ export default function AppFunctional(props) {
         ))}
       </div>
       <div className="info">
-        <h3 id="message">{message}</h3>
+        <h3 id="message" data-test="data-test-3">
+          {message}
+        </h3>
       </div>
       <div id="keypad">
-        <button id="left" onClick={ilerle}>
+        <button id="left" onClick={ilerle} data-test="sol-button-testi">
           SOL
         </button>
         <button id="up" onClick={ilerle}>
           YUKARI
         </button>
-        <button id="right" onClick={ilerle}>
+        <button id="right" onClick={ilerle} data-test="sag-button-testi">
           SAĞ
         </button>
         <button id="down" onClick={ilerle}>
@@ -156,7 +158,7 @@ export default function AppFunctional(props) {
           placeholder="email girin"
           onChange={onChange}
           value={email}
-          // data-test="input-testi"
+          data-test="input-testi"
         ></input>
         <input id="submit" type="submit"></input>
       </form>
